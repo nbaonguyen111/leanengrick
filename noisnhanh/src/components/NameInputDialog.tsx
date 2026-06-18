@@ -54,7 +54,7 @@ export default function NameInputDialog({ onSubmit }: NameInputDialogProps) {
   }, [showInput, isTyping, handleSubmit]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center pb-8 md:pb-16 px-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Background */}
       {showMusicOverlay && (
   <ClickToPlayMusic onStart={() => setShowMusicOverlay(false)} />
@@ -79,16 +79,16 @@ export default function NameInputDialog({ onSubmit }: NameInputDialogProps) {
       </div>
 
       {/* Character + Dialogue Container */}
-      <div className="relative z-10 w-full max-w-2xl">
+      <div className="relative z-10 w-full max-w-2xl max-h-[90vh] md:max-h-screen overflow-y-auto overscroll-contain">
         {/* Dialogue Box */}
-        <div className="relative mb-4">
+        <div className="relative mb-4 md:mb-6">
           {/* Arrow pointing down */}
           {/* <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 z-20">
             <div className="w-0 h-0 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-t-[20px] border-t-white" />
           </div> */}
 
           {/* Main dialogue box */}
-          <div className="relative bg-white rounded-lg shadow-xl border-2 border-gray-300 p-6 md:p-8">
+          <div className="relative bg-white rounded-lg shadow-xl border-2 border-gray-300 p-4 sm:p-6 md:p-8">
             {/* Character name tag */}
             <div className="inline-block bg-gray-800 text-white px-3 py-1 rounded-t-lg rounded-br-lg text-sm font-bold mb-3">
               Goku
@@ -106,17 +106,17 @@ export default function NameInputDialog({ onSubmit }: NameInputDialogProps) {
 
             {/* Input area */}
             {showInput && !isTyping && (
-              <div className="mt-4 space-y-3">
+              <div className="mt-3 sm:mt-4 space-y-2 sm:space-y-3">
                 <div className="relative bg-white rounded-[2rem] shadow-lg overflow-hidden"
                      style={{
                        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.8)'
                      }}>
                   {/* Cloud-like border effect */}
-                  <div className="absolute inset-0 rounded-[2rem] border-[6px] border-white/80"
+                  <div className="absolute inset-0 rounded-[2rem] border-[4px] sm:border-[6px] border-white/80"
                        style={{
                          boxShadow: 'inset 0 0 20px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.1)'
                        }} />
-                  <div className="relative flex items-center px-5 py-3">
+                  <div className="relative flex items-center px-4 sm:px-5 py-2.5 sm:py-3">
                     <input
                       type="text"
                       value={name}
@@ -126,7 +126,7 @@ export default function NameInputDialog({ onSubmit }: NameInputDialogProps) {
                       }}
                       onKeyDown={handleKeyDown}
                       placeholder="Nhập tên của bạn..."
-                      className="flex-1 bg-transparent text-gray-800 placeholder-gray-400 outline-none font-medium text-lg"
+                      className="flex-1 bg-transparent text-gray-800 placeholder-gray-400 outline-none font-medium text-base sm:text-lg"
                       autoFocus
                       maxLength={20}
                     />
@@ -135,8 +135,8 @@ export default function NameInputDialog({ onSubmit }: NameInputDialogProps) {
 
                 {/* Error message */}
                 {error && (
-                  <div className="bg-red-50 border border-red-300 rounded-lg px-4 py-2">
-                    <p className="text-red-600 text-sm font-medium text-center">
+                  <div className="bg-red-50 border border-red-300 rounded-lg px-3 sm:px-4 py-2">
+                    <p className="text-red-600 text-xs sm:text-sm font-medium text-center">
                       {error}
                     </p>
                   </div>
@@ -146,7 +146,7 @@ export default function NameInputDialog({ onSubmit }: NameInputDialogProps) {
                 <button
                   onClick={handleSubmit}
                   disabled={!name.trim()}
-                  className="w-full py-3 px-6 bg-gray-800 hover:bg-gray-900 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-colors"
+                  className="w-full py-2.5 sm:py-3 px-6 bg-gray-800 hover:bg-gray-900 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-colors text-sm sm:text-base"
                 >
                   XÁC NHẬN
                 </button>
@@ -165,13 +165,13 @@ export default function NameInputDialog({ onSubmit }: NameInputDialogProps) {
         </div>
 
         {/* Character */}
-        <div className="relative flex justify-center">
+        <div className="relative flex justify-center mt-2 md:mt-4">
           {/* Character shadow */}
-          <div className="absolute bottom-0 w-24 h-3 bg-black/40 rounded-full blur-md" />
+          <div className="absolute bottom-0 w-16 sm:w-20 h-2 bg-black/40 rounded-full blur-md" />
 
           {/* Character */}
-          <div className="relative text-8xl md:text-9xl leading-none filter drop-shadow-xl">
-            <img src="/nFZpE-Photoroom.png" alt="Mascot" className="w-full h-full md:w-100 md:h-50 object-contain" />
+          <div className="relative text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-none filter drop-shadow-xl">
+            <img src="/nFZpE-Photoroom.png" alt="Mascot" className="w-24 h-24 sm:w-32 sm:h-32 md:w-100 md:h-50 object-contain" />
           </div>
         </div>
       </div>
