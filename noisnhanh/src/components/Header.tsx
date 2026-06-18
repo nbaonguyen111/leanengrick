@@ -1,6 +1,9 @@
 "use client";
 
 import { Search, Volume2, Plus, Crown } from "lucide-react";
+import dog from "../assets/dog.gif";
+// import cat from "../assets/";
+import Image from "next/image"
 
 interface HeaderProps {
   query: string;
@@ -19,6 +22,10 @@ export default function Header({ query, onQueryChange, onAddClick, hasSubscripti
             <div className="p-1.5 bg-emerald-600 rounded-lg">
               <Volume2 className="w-5 h-5 text-white" />
             </div>
+            <div className="mascot fixed bottom-6 right-6 z-50">
+  <Image src={dog} alt="mascot" className="w-20" />
+</div>
+ 
             <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
               NóiNhanh <span className="text-gray-600">Nguyen
 </span>             </h1>
@@ -29,6 +36,7 @@ export default function Header({ query, onQueryChange, onAddClick, hasSubscripti
               </div>
             )}
           </div>
+          
           <div className="flex items-center gap-2">
             {!hasSubscription && onUpgradeClick && (
               <button

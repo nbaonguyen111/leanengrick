@@ -3,9 +3,12 @@
 import { useState, useMemo, useCallback } from "react";
 import { Search } from "lucide-react";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import catwalk from "@/assets/Cat.gif";
 import PhraseCard from "@/components/PhraseCard";
 import AccordionCategories from "@/components/AccordionCategories";
 import AddPhraseModal from "@/components/AddPhraseModal";
+import NameInputDialog from "@/components/NameInputDialog";
 import { usePhrases } from "@/hooks/usePhrases";
 import { useSearch } from "@/hooks/useSearch";
 import { useFavorites } from "@/hooks/useFavorites";
@@ -22,7 +25,7 @@ export default function Home() {
   const [showSubscriptionModal, setShowSubscriptionModal] = useState(false);
   const [isPurchasing, setIsPurchasing] = useState(false);
 
-  const { name: authorName, updateName } = useUserProfile();
+  const { name: authorName, updateName, hasProfile } = useUserProfile();
   const { subscription, purchaseSubscription, canAddPhrase } = useSubscription();
   const {
     customPhrases,
@@ -127,6 +130,10 @@ export default function Home() {
         </div>
       </div>
     );
+  }
+
+  if (!hasProfile) {
+    return <NameInputDialog onSubmit={updateName} />;
   }
 
   return (
@@ -255,6 +262,8 @@ export default function Home() {
         }}
         isLoading={isPurchasing}
       />
+
+      <Footer />
     </div>
   );
 }

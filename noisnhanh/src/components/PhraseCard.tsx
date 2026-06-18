@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Volume2, Heart, Copy, Check, Trash2, Pencil } from "lucide-react";
 import { Phrase } from "@/types";
 
+
 interface PhraseCardProps {
   phrase: Phrase;
   isFavorite: boolean;
@@ -114,6 +115,7 @@ export default function PhraseCard({
             </span>
           )}
         </div>
+        
         <div className="flex items-center gap-0.5 flex-shrink-0">
           <button
             onClick={speak}
