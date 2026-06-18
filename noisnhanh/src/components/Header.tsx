@@ -20,8 +20,8 @@ export default function Header({ query, onQueryChange, onAddClick, hasSubscripti
               <Volume2 className="w-5 h-5 text-white" />
             </div>
             <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-              NóiNhanh
-            </h1>
+              NóiNhanh <span className="text-gray-600">Nguyen
+</span>             </h1>
             {hasSubscription && (
               <div className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full">
                 <Crown className="w-3.5 h-3.5 text-white" />

@@ -28,6 +28,42 @@ export default function PhraseCard({
   const [copied, setCopied] = useState(false);
   const [playing, setPlaying] = useState(false);
 
+  const getBestEnglishVoice = (): SpeechSynthesisVoice | null => {
+    const voices = window.speechSynthesis.getVoices();
+    if (voices.length === 0) return null;
+
+    // Ưu tiên giọng chất lượng cao, tránh giọng Google Translate (thường là "Google US English" hoặc "Google Translate")
+    const preferredVoices = [
+      "Microsoft David",
+      "Microsoft Zira",
+      "Microsoft Mark",
+      "Samantha",
+      "Daniel",
+      "Karen",
+      "Moira",
+      "Tingting",
+      "Alex",
+    ];
+
+    // Tìm giọng ưu tiên trước
+    for (const name of preferredVoices) {
+      const voice = voices.find((v) => v.name === name && v.lang.startsWith("en"));
+      if (voice) return voice;
+    }
+
+    // Tìm giọng English không phải Google Translate
+    const nonGoogleVoice = voices.find(
+      (v) => v.lang.startsWith("en") && !v.name.includes("Google") && !v.name.includes("Translate")
+    );
+    if (nonGoogleVoice) return nonGoogleVoice;
+
+    // Fallback: lấy giọng English đầu tiên
+    const anyEnglishVoice = voices.find((v) => v.lang.startsWith("en"));
+    if (anyEnglishVoice) return anyEnglishVoice;
+
+    return null;
+  };
+
   const speak = () => {
     if ("speechSynthesis" in window) {
       window.speechSynthesis.cancel();
@@ -36,6 +72,12 @@ export default function PhraseCard({
       utterance.rate = 0.9;
       utterance.onstart = () => setPlaying(true);
       utterance.onend = () => setPlaying(false);
+
+      const voice = getBestEnglishVoice();
+      if (voice) {
+        utterance.voice = voice;
+      }
+
       window.speechSynthesis.speak(utterance);
     }
   };
