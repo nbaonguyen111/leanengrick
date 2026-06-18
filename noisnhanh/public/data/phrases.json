@@ -1,0 +1,608 @@
+{
+  "groups": [
+    {
+      "id": "restaurant",
+      "name": "Nhà hàng",
+      "icon": "UtensilsCrossed",
+      "nameEn": "Restaurant"
+    },
+    {
+      "id": "hotel",
+      "name": "Khách sạn",
+      "icon": "Hotel",
+      "nameEn": "Hotel"
+    },
+    {
+      "id": "taxi",
+      "name": "Taxi",
+      "icon": "Car",
+      "nameEn": "Taxi"
+    },
+    {
+      "id": "shopping",
+      "name": "Mua sắm",
+      "icon": "ShoppingBag",
+      "nameEn": "Shopping"
+    },
+    {
+      "id": "emergency",
+      "name": "Cấp cứu",
+      "icon": "Ambulance",
+      "nameEn": "Emergency"
+    },
+    {
+      "id": "dating",
+      "name": "Hẹn hò",
+      "icon": "Heart",
+      "nameEn": "Dating"
+    },
+    {
+      "id": "travel",
+      "name": "Du lịch",
+      "icon": "Plane",
+      "nameEn": "Travel"
+    }
+  ],
+  "phrases": [
+    {
+      "id": 1,
+      "group_id": "restaurant",
+      "english_text": "Hello sir, how are you today?",
+      "vietnamese_text": "Xin chào anh, hôm nay anh thế nào?",
+      "keywords": ["chào hỏi", "khách", "restaurant", "greeting", "hello"]
+    },
+    {
+      "id": 2,
+      "group_id": "restaurant",
+      "english_text": "Nice to meet you.",
+      "vietnamese_text": "Rất vui được gặp anh.",
+      "keywords": ["chào hỏi", "gặp mặt", "khách", "greeting"]
+    },
+    {
+      "id": 3,
+      "group_id": "restaurant",
+      "english_text": "Welcome to our restaurant.",
+      "vietnamese_text": "Chào mừng đến với nhà hàng của chúng tôi.",
+      "keywords": ["chào mừng", "khách", "restaurant", "welcome"]
+    },
+    {
+      "id": 4,
+      "group_id": "restaurant",
+      "english_text": "Would you like some water?",
+      "vietnamese_text": "Anh có muốn uống nước không?",
+      "keywords": ["mời", "uống", "nước", "water", "drink", "offer"]
+    },
+    {
+      "id": 5,
+      "group_id": "restaurant",
+      "english_text": "What would you like to eat?",
+      "vietnamese_text": "Anh muốn ăn gì?",
+      "keywords": ["gọi món", "ăn", "order", "food", "menu"]
+    },
+    {
+      "id": 6,
+      "group_id": "restaurant",
+      "english_text": "Do you have any allergies?",
+      "vietnamese_text": "Anh có bị dị ứng gì không?",
+      "keywords": ["dị ứng", "allergy", "food", "order"]
+    },
+    {
+      "id": 7,
+      "group_id": "restaurant",
+      "english_text": "Our special today is pho.",
+      "vietnamese_text": "Món đặc biệt hôm nay là phở.",
+      "keywords": ["đặc biệt", "món", "special", "menu", "food"]
+    },
+    {
+      "id": 8,
+      "group_id": "restaurant",
+      "english_text": "Can I get you another drink?",
+      "vietnamese_text": "Tôi lấy thêm đồ uống cho anh nhé?",
+      "keywords": ["thêm", "uống", "drink", "offer", "more"]
+    },
+    {
+      "id": 9,
+      "group_id": "restaurant",
+      "english_text": "Is everything okay with your food?",
+      "vietnamese_text": "Món ăn có ổn không ạ?",
+      "keywords": ["hỏi", "món ăn", "service", "food", "check"]
+    },
+    {
+      "id": 10,
+      "group_id": "restaurant",
+      "english_text": "Would you like dessert?",
+      "vietnamese_text": "Anh có muốn ăn tráng miệng không?",
+      "keywords": ["tráng miệng", "dessert", "offer", "sweet"]
+    },
+    {
+      "id": 11,
+      "group_id": "restaurant",
+      "english_text": "The bill, please.",
+      "vietnamese_text": "Tính tiền ạ.",
+      "keywords": ["thanh toán", "bill", "payment", "check"]
+    },
+    {
+      "id": 12,
+      "group_id": "restaurant",
+      "english_text": "Please wait a moment.",
+      "vietnamese_text": "Xin vui lòng đợi một lát.",
+      "keywords": ["đợi", "wait", "moment", "service"]
+    },
+    {
+      "id": 13,
+      "group_id": "restaurant",
+      "english_text": "Do you need a menu?",
+      "vietnamese_text": "Anh có cần menu không?",
+      "keywords": ["menu", "order", "food", "need"]
+    },
+    {
+      "id": 14,
+      "group_id": "restaurant",
+      "english_text": "How many people are in your group?",
+      "vietnamese_text": "Nhóm anh có mấy người?",
+      "keywords": ["số lượng", "người", "group", "table", "people"]
+    },
+    {
+      "id": 15,
+      "group_id": "restaurant",
+      "english_text": "Thank you for coming to our restaurant.",
+      "vietnamese_text": "Cảm ơn anh đã đến nhà hàng của chúng tôi.",
+      "keywords": ["cảm ơn", "thank", "goodbye", "customer"]
+    },
+    {
+      "id": 16,
+      "group_id": "hotel",
+      "english_text": "Welcome to our hotel.",
+      "vietnamese_text": "Chào mừng đến với khách sạn của chúng tôi.",
+      "keywords": ["chào mừng", "khách sạn", "welcome", "hotel"]
+    },
+    {
+      "id": 17,
+      "group_id": "hotel",
+      "english_text": "Do you have a reservation?",
+      "vietnamese_text": "Anh có đặt phòng trước không?",
+      "keywords": ["đặt phòng", "reservation", "booking", "room"]
+    },
+    {
+      "id": 18,
+      "group_id": "hotel",
+      "english_text": "What is your room number?",
+      "vietnamese_text": "Số phòng của anh là bao nhiêu?",
+      "keywords": ["số phòng", "room number", "hotel"]
+    },
+    {
+      "id": 19,
+      "group_id": "hotel",
+      "english_text": "Here is your room key.",
+      "vietnamese_text": "Đây là chìa khóa phòng của anh.",
+      "keywords": ["chìa khóa", "key", "room", "check in"]
+    },
+    {
+      "id": 20,
+      "group_id": "hotel",
+      "english_text": "Breakfast is served from 7 to 10 AM.",
+      "vietnamese_text": "Bữa sáng phục vụ từ 7 đến 10 giờ sáng.",
+      "keywords": ["ăn sáng", "breakfast", "service", "time"]
+    },
+    {
+      "id": 21,
+      "group_id": "hotel",
+      "english_text": "Do you need extra towels?",
+      "vietnamese_text": "Anh có cần thêm khăn tắm không?",
+      "keywords": ["khăn tắm", "towels", "extra", "room service"]
+    },
+    {
+      "id": 22,
+      "group_id": "hotel",
+      "english_text": "WiFi password is at the front desk.",
+      "vietnamese_text": "Mật khẩu WiFi có ở quầy lễ tân.",
+      "keywords": ["wifi", "internet", "password", "front desk"]
+    },
+    {
+      "id": 23,
+      "group_id": "hotel",
+      "english_text": "Check out time is 12 PM.",
+      "vietnamese_text": "Giờ trả phòng là 12 giờ trưa.",
+      "keywords": ["trả phòng", "check out", "time"]
+    },
+    {
+      "id": 24,
+      "group_id": "hotel",
+      "english_text": "Do you need help with your luggage?",
+      "vietnamese_text": "Anh có cần giúp mang hành lý không?",
+      "keywords": ["hành lý", "luggage", "help", "baggage"]
+    },
+    {
+      "id": 25,
+      "group_id": "hotel",
+      "english_text": "I will call a taxi for you.",
+      "vietnamese_text": "Tôi sẽ gọi taxi cho anh.",
+      "keywords": ["taxi", "gọi", "call", "car"]
+    },
+    {
+      "id": 26,
+      "group_id": "taxi",
+      "english_text": "Where would you like to go?",
+      "vietnamese_text": "Anh muốn đi đâu?",
+      "keywords": ["đi đâu", "destination", "go", "where"]
+    },
+    {
+      "id": 27,
+      "group_id": "taxi",
+      "english_text": "How much is the fare?",
+      "vietnamese_text": "Giá bao nhiêu?",
+      "keywords": ["giá", "fare", "price", "cost", "money"]
+    },
+    {
+      "id": 28,
+      "group_id": "taxi",
+      "english_text": "Please turn left here.",
+      "vietnamese_text": "Xin hãy rẽ trái ở đây.",
+      "keywords": ["rẽ trái", "turn left", "direction"]
+    },
+    {
+      "id": 29,
+      "group_id": "taxi",
+      "english_text": "Please turn right here.",
+      "vietnamese_text": "Xin hãy rẽ phải ở đây.",
+      "keywords": ["rẽ phải", "turn right", "direction"]
+    },
+    {
+      "id": 30,
+      "group_id": "taxi",
+      "english_text": "Go straight, please.",
+      "vietnamese_text": "Đi thẳng ạ.",
+      "keywords": ["đi thẳng", "straight", "direction"]
+    },
+    {
+      "id": 31,
+      "group_id": "taxi",
+      "english_text": "Please stop here.",
+      "vietnamese_text": "Vui lòng dừng ở đây.",
+      "keywords": ["dừng", "stop", "here"]
+    },
+    {
+      "id": 32,
+      "group_id": "taxi",
+      "english_text": "How long does it take?",
+      "vietnamese_text": "Mất bao lâu?",
+      "keywords": ["bao lâu", "time", "how long", "duration"]
+    },
+    {
+      "id": 33,
+      "group_id": "taxi",
+      "english_text": "Can you go to the airport?",
+      "vietnamese_text": "Anh có thể đi sân bay không?",
+      "keywords": ["sân bay", "airport", "go"]
+    },
+    {
+      "id": 34,
+      "group_id": "taxi",
+      "english_text": "I need to go to this address.",
+      "vietnamese_text": "Tôi cần đến địa chỉ này.",
+      "keywords": ["địa chỉ", "address", "need", "go"]
+    },
+    {
+      "id": 35,
+      "group_id": "taxi",
+      "english_text": "Keep the change.",
+      "vietnamese_text": "Giữ lại tiền thừa.",
+      "keywords": ["tiền thừa", "change", "tip", "payment"]
+    },
+    {
+      "id": 36,
+      "group_id": "shopping",
+      "english_text": "How much is this?",
+      "vietnamese_text": "Cái này bao nhiêu tiền?",
+      "keywords": ["bao nhiêu", "tiền", "price", "how much", "cost"]
+    },
+    {
+      "id": 37,
+      "group_id": "shopping",
+      "english_text": "Do you have a discount?",
+      "vietnamese_text": "Có giảm giá không?",
+      "keywords": ["giảm giá", "discount", "sale", "cheaper"]
+    },
+    {
+      "id": 38,
+      "group_id": "shopping",
+      "english_text": "Can I try this on?",
+      "vietnamese_text": "Tôi có thể thử cái này không?",
+      "keywords": ["thử", "try on", "fitting", "size"]
+    },
+    {
+      "id": 39,
+      "group_id": "shopping",
+      "english_text": "Do you have a larger size?",
+      "vietnamese_text": "Có size lớn hơn không?",
+      "keywords": ["size", "lớn", "larger", "bigger"]
+    },
+    {
+      "id": 40,
+      "group_id": "shopping",
+      "english_text": "Do you have this in red?",
+      "vietnamese_text": "Cái này có màu đỏ không?",
+      "keywords": ["màu", "color", "red"]
+    },
+    {
+      "id": 41,
+      "group_id": "shopping",
+      "english_text": "I am just looking, thank you.",
+      "vietnamese_text": "Tôi chỉ xem thôi, cảm ơn.",
+      "keywords": ["xem", "looking", "browsing"]
+    },
+    {
+      "id": 42,
+      "group_id": "shopping",
+      "english_text": "Can I pay by credit card?",
+      "vietnamese_text": "Tôi có thể trả bằng thẻ tín dụng không?",
+      "keywords": ["thẻ", "credit card", "payment"]
+    },
+    {
+      "id": 43,
+      "group_id": "shopping",
+      "english_text": "Do you have a cheaper one?",
+      "vietnamese_text": "Có cái nào rẻ hơn không?",
+      "keywords": ["rẻ", "cheaper", "affordable"]
+    },
+    {
+      "id": 44,
+      "group_id": "shopping",
+      "english_text": "Can I get a receipt?",
+      "vietnamese_text": "Tôi có thể lấy hóa đơn không?",
+      "keywords": ["hóa đơn", "receipt", "bill"]
+    },
+    {
+      "id": 45,
+      "group_id": "shopping",
+      "english_text": "This is beautiful. I will take it.",
+      "vietnamese_text": "Cái này đẹp. Tôi sẽ mua.",
+      "keywords": ["đẹp", "mua", "beautiful", "buy"]
+    },
+    {
+      "id": 46,
+      "group_id": "emergency",
+      "english_text": "Help! Call the police!",
+      "vietnamese_text": "Cứu! Gọi cảnh sát!",
+      "keywords": ["cứu", "cảnh sát", "help", "police", "emergency"]
+    },
+    {
+      "id": 47,
+      "group_id": "emergency",
+      "english_text": "I need a doctor.",
+      "vietnamese_text": "Tôi cần bác sĩ.",
+      "keywords": ["bác sĩ", "doctor", "emergency", "medical"]
+    },
+    {
+      "id": 48,
+      "group_id": "emergency",
+      "english_text": "Please call an ambulance!",
+      "vietnamese_text": "Vui lòng gọi xe cứu thương!",
+      "keywords": ["cứu thương", "ambulance", "medical"]
+    },
+    {
+      "id": 49,
+      "group_id": "emergency",
+      "english_text": "I lost my passport.",
+      "vietnamese_text": "Tôi bị mất hộ chiếu.",
+      "keywords": ["mất", "hộ chiếu", "passport", "lost"]
+    },
+    {
+      "id": 50,
+      "group_id": "emergency",
+      "english_text": "I lost my wallet.",
+      "vietnamese_text": "Tôi bị mất ví.",
+      "keywords": ["mất", "ví", "wallet", "lost"]
+    },
+    {
+      "id": 51,
+      "group_id": "emergency",
+      "english_text": "I need help.",
+      "vietnamese_text": "Tôi cần giúp đỡ.",
+      "keywords": ["giúp đỡ", "help", "need"]
+    },
+    {
+      "id": 52,
+      "group_id": "emergency",
+      "english_text": "Where is the hospital?",
+      "vietnamese_text": "Bệnh viện ở đâu?",
+      "keywords": ["bệnh viện", "hospital", "where"]
+    },
+    {
+      "id": 53,
+      "group_id": "emergency",
+      "english_text": "I am lost. Can you help me?",
+      "vietnamese_text": "Tôi bị lạc. Anh có thể giúp tôi không?",
+      "keywords": ["lạc", "lost", "help"]
+    },
+    {
+      "id": 54,
+      "group_id": "emergency",
+      "english_text": "There is a fire!",
+      "vietnamese_text": "Có cháy!",
+      "keywords": ["cháy", "fire", "emergency"]
+    },
+    {
+      "id": 55,
+      "group_id": "emergency",
+      "english_text": "Please stay calm. Help is coming.",
+      "vietnamese_text": "Vui lòng bình tĩnh. Sẽ có người đến giúp.",
+      "keywords": ["bình tĩnh", "calm", "help"]
+    },
+    {
+      "id": 56,
+      "group_id": "dating",
+      "english_text": "You are very beautiful.",
+      "vietnamese_text": "Em rất đẹp.",
+      "keywords": ["khen", "đẹp", "beautiful", "compliment"]
+    },
+    {
+      "id": 57,
+      "group_id": "dating",
+      "english_text": "Can I have your number?",
+      "vietnamese_text": "Anh có thể xin số em không?",
+      "keywords": ["xin số", "number", "phone", "contact"]
+    },
+    {
+      "id": 58,
+      "group_id": "dating",
+      "english_text": "Do you want to go out with me?",
+      "vietnamese_text": "Em có muốn đi chơi với anh không?",
+      "keywords": ["hẹn", "date", "go out", "invite"]
+    },
+    {
+      "id": 59,
+      "group_id": "dating",
+      "english_text": "Would you like to have coffee?",
+      "vietnamese_text": "Em có muốn đi uống cà phê không?",
+      "keywords": ["cà phê", "coffee", "date", "invite"]
+    },
+    {
+      "id": 60,
+      "group_id": "dating",
+      "english_text": "I really like you.",
+      "vietnamese_text": "Anh thực sự thích em.",
+      "keywords": ["thích", "like", "confess"]
+    },
+    {
+      "id": 61,
+      "group_id": "dating",
+      "english_text": "You have a beautiful smile.",
+      "vietnamese_text": "Em có nụ cười rất đẹp.",
+      "keywords": ["cười", "smile", "compliment", "beautiful"]
+    },
+    {
+      "id": 62,
+      "group_id": "dating",
+      "english_text": "What kind of music do you like?",
+      "vietnamese_text": "Em thích thể loại nhạc nào?",
+      "keywords": ["nhạc", "music", "hobby", "interest"]
+    },
+    {
+      "id": 63,
+      "group_id": "dating",
+      "english_text": "Let me pay for dinner.",
+      "vietnamese_text": "Để anh trả tiền bữa tối.",
+      "keywords": ["trả tiền", "pay", "dinner", "treat"]
+    },
+    {
+      "id": 64,
+      "group_id": "dating",
+      "english_text": "Can I take a photo with you?",
+      "vietnamese_text": "Anh có thể chụp ảnh với em không?",
+      "keywords": ["chụp ảnh", "photo", "picture"]
+    },
+    {
+      "id": 65,
+      "group_id": "dating",
+      "english_text": "I had a great time tonight.",
+      "vietnamese_text": "Tối nay anh đã có thời gian rất vui.",
+      "keywords": ["vui", "great time", "date", "enjoy"]
+    },
+    {
+      "id": 66,
+      "group_id": "travel",
+      "english_text": "Excuse me, where is the restroom?",
+      "vietnamese_text": "Xin lỗi, nhà vệ sinh ở đâu?",
+      "keywords": ["nhà vệ sinh", "restroom", "bathroom", "where"]
+    },
+    {
+      "id": 67,
+      "group_id": "travel",
+      "english_text": "How do I get to the train station?",
+      "vietnamese_text": "Làm thế nào để đến ga tàu?",
+      "keywords": ["ga tàu", "train station", "direction"]
+    },
+    {
+      "id": 68,
+      "group_id": "travel",
+      "english_text": "Where is the bus stop?",
+      "vietnamese_text": "Trạm xe buýt ở đâu?",
+      "keywords": ["xe buýt", "bus stop", "where"]
+    },
+    {
+      "id": 69,
+      "group_id": "travel",
+      "english_text": "One ticket to Hanoi, please.",
+      "vietnamese_text": "Một vé đi Hà Nội ạ.",
+      "keywords": ["vé", "ticket", "hanoi", "buy"]
+    },
+    {
+      "id": 70,
+      "group_id": "travel",
+      "english_text": "What time does the bus leave?",
+      "vietnamese_text": "Mấy giờ xe buýt khởi hành?",
+      "keywords": ["giờ", "time", "bus", "leave", "schedule"]
+    },
+    {
+      "id": 71,
+      "group_id": "travel",
+      "english_text": "Is it far from here?",
+      "vietnamese_text": "Nó có xa đây không?",
+      "keywords": ["xa", "far", "distance", "near"]
+    },
+    {
+      "id": 72,
+      "group_id": "travel",
+      "english_text": "Can you take a photo for me?",
+      "vietnamese_text": "Anh có thể chụp ảnh cho tôi không?",
+      "keywords": ["chụp ảnh", "photo", "camera"]
+    },
+    {
+      "id": 73,
+      "group_id": "travel",
+      "english_text": "Where can I buy a SIM card?",
+      "vietnamese_text": "Tôi có thể mua thẻ SIM ở đâu?",
+      "keywords": ["sim card", "điện thoại", "phone", "buy"]
+    },
+    {
+      "id": 74,
+      "group_id": "travel",
+      "english_text": "I need to exchange money.",
+      "vietnamese_text": "Tôi cần đổi tiền.",
+      "keywords": ["đổi tiền", "exchange", "money", "currency"]
+    },
+    {
+      "id": 75,
+      "group_id": "travel",
+      "english_text": "What is this place famous for?",
+      "vietnamese_text": "Nơi này nổi tiếng về gì?",
+      "keywords": ["nổi tiếng", "famous", "place", "sightseeing"]
+    },
+    {
+      "id": 76,
+      "group_id": "travel",
+      "english_text": "Is there a cheaper hotel nearby?",
+      "vietnamese_text": "Có khách sạn nào rẻ hơn gần đây không?",
+      "keywords": ["khách sạn", "hotel", "cheaper", "nearby"]
+    },
+    {
+      "id": 77,
+      "group_id": "travel",
+      "english_text": "Can you recommend a good restaurant?",
+      "vietnamese_text": "Anh có thể giới thiệu nhà hàng ngon không?",
+      "keywords": ["giới thiệu", "recommend", "restaurant", "food"]
+    },
+    {
+      "id": 78,
+      "group_id": "travel",
+      "english_text": "I am from Vietnam.",
+      "vietnamese_text": "Tôi đến từ Việt Nam.",
+      "keywords": ["việt nam", "vietnam", "from", "country"]
+    },
+    {
+      "id": 79,
+      "group_id": "travel",
+      "english_text": "It is very beautiful here.",
+      "vietnamese_text": "Ở đây rất đẹp.",
+      "keywords": ["đẹp", "beautiful", "place", "scenery"]
+    },
+    {
+      "id": 80,
+      "group_id": "travel",
+      "english_text": "Thank you for your help.",
+      "vietnamese_text": "Cảm ơn sự giúp đỡ của anh.",
+      "keywords": ["cảm ơn", "thank", "help", "grateful"]
+    }
+  ]
+}
